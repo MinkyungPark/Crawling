@@ -1,0 +1,40 @@
+뉴스 크롤링 사용
+
+news_test.py
+콘솔에
+>> python 모듈이름 키워드 가져올페이지숫자 결과파일명
+명령어 입력
+ex) python news_test.py 국내+자동차+판매+순위 100 result_article.txt
+동아일보에서 국내자동차판매순위 관련 뉴스 100개의 내용을 result_article.txt에 저장
+
+
+clean.txt.py
+INPUT_FILE_NAME = 'result_article.txt'
+OUTPUT_FILE_NAME = 'result_clean.txt'
+인풋파일네임에 정제할 파일명을 넣으면 특수문자, 영어 정제 하여
+result_clean.txt에 저장
+
+
+anaysis.py
+>> python 모듈이름 텍스트파일명.txt 단어개수 결과파일명.txt
+명령어 입력
+ex) python anaysis.py result_clean.txt 100 result_anaysis.txt
+결과
+것 739
+자동차 709
+위 644
+차 598
+한국 590
+등 584
+판매 546
+시장 511
+모델 445
+국내 413
+수 412
+지난해 353
+세계 351
+.....
+이런식으로 많이 사용된 단어와 사용횟수 출력
+
+대신 정제는 안되어 있음 ㅜㅜ gsub파일만들어서 필요없지만 많이 사용되는 단어빼기
+한단어 빼기 붙여사용되어야 하는 단어도 추가 등등 해서 정제가 필요합니다.
